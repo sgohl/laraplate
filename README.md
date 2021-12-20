@@ -104,15 +104,15 @@ https://beyondco.de/docs/laravel-websockets/getting-started/installation
 
 ```
 # as for now, 2021-12-17, installation fails (deps); workaround:
-composer require guzzlehttp/psr7:^1.5
+sail composer require guzzlehttp/psr7:^1.5
 
-composer require beyondcode/laravel-websockets
-php artisan vendor:publish --provider="BeyondCode\LaravelWebSockets\WebSocketsServiceProvider" --tag="migrations"
-php artisan migrate
-php artisan vendor:publish --provider="BeyondCode\LaravelWebSockets\WebSocketsServiceProvider" --tag="config"
+sail composer require beyondcode/laravel-websockets
+sail php artisan vendor:publish --provider="BeyondCode\LaravelWebSockets\WebSocketsServiceProvider" --tag="migrations"
+sail php artisan migrate
+sail php artisan vendor:publish --provider="BeyondCode\LaravelWebSockets\WebSocketsServiceProvider" --tag="config"
 
 # port 6001
-php artisan websockets:serve
+sail php artisan websockets:serve
 ```
 
 ## Socket.io
