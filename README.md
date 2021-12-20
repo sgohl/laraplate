@@ -37,7 +37,7 @@ todo
 sail composer require directorytree/ldaprecord-laravel
 sail php artisan vendor:publish --provider="LdapRecord\Laravel\LdapServiceProvider"
 
-# configure config/ldap.php OR put in 
+# .env
 LDAP_LOGGING=true
 LDAP_CONNECTION=default
 LDAP_HOST=
