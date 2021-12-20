@@ -20,10 +20,10 @@ Goto: http://localhost/
 ## -either- Breeze (simpler)
 ```
 sail composer require laravel/breeze --dev
-sail php artisan breeze:install
+sail artisan breeze:install
 sail npm install
 sail npm run dev
-sail php artisan migrate
+sail artisan migrate
 ```
 
 ## -or- Jetstream
@@ -35,7 +35,7 @@ todo
 https://ldaprecord.com/docs/laravel/v2/
 ```
 sail composer require directorytree/ldaprecord-laravel
-sail php artisan vendor:publish --provider="LdapRecord\Laravel\LdapServiceProvider"
+sail artisan vendor:publish --provider="LdapRecord\Laravel\LdapServiceProvider"
 
 # .env
 LDAP_LOGGING=true
@@ -49,9 +49,8 @@ LDAP_SSL=false
 LDAP_TLS=false
 
 # test connection:
-sail php artisan ldap:test
+sail art ldap:test
 ```
-
 
 #  AdminLTE
 
@@ -59,8 +58,8 @@ Full reference: https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Installatio
 
 ```
 sail composer require jeroennoten/laravel-adminlte
-sail php artisan adminlte:install
-#? sail php artisan adminlte:install --only=main_views
+sail artisan adminlte:install
+#? sail artisan adminlte:install --only=main_views
 ```
 
 Replace the breeze-distributed default dashboard blade template:
@@ -94,7 +93,7 @@ Replace the breeze-distributed default dashboard blade template:
 https://laravel-livewire.com/docs/2.x/quickstart
 ```
 sail composer require livewire/livewire
-sail php artisan vendor:publish --tag=livewire:config
+sail artisan vendor:publish --tag=livewire:config
 ```
 
 # Laravel Echo / Websockets
@@ -107,12 +106,12 @@ https://beyondco.de/docs/laravel-websockets/getting-started/installation
 sail composer require guzzlehttp/psr7:^1.5
 
 sail composer require beyondcode/laravel-websockets
-sail php artisan vendor:publish --provider="BeyondCode\LaravelWebSockets\WebSocketsServiceProvider" --tag="migrations"
-sail php artisan migrate
-sail php artisan vendor:publish --provider="BeyondCode\LaravelWebSockets\WebSocketsServiceProvider" --tag="config"
+sail artisan vendor:publish --provider="BeyondCode\LaravelWebSockets\WebSocketsServiceProvider" --tag="migrations"
+sail artisan migrate
+sail artisan vendor:publish --provider="BeyondCode\LaravelWebSockets\WebSocketsServiceProvider" --tag="config"
 
 # port 6001
-sail php artisan websockets:serve
+sail artisan websockets:serve
 ```
 
 ## Socket.io
