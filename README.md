@@ -91,11 +91,7 @@ Replace the breeze-distributed default dashboard blade template:
 
 # Livewire
 
-while installing, listen to: https://open.spotify.com/track/6FWoYwZa13llS7nj0SG65F  
-this is mandatory! otherwise it won't work! trust me.
-
 https://laravel-livewire.com/docs/2.x/quickstart
-
 ```
 sail composer require livewire/livewire
 sail php artisan vendor:publish --tag=livewire:config
