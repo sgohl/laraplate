@@ -63,9 +63,29 @@ sail php artisan adminlte:install
 #? sail php artisan adminlte:install --only=main_views
 ```
 
-Copy example basic page from examples to `resources/views`
+Replace the breeze-distributed default dashboard blade template:
 ```
-cp -fv ../examples/home.blade.php resources/views/home.blade.php
+# resources/views/dashboard.blade.php
+
+@extends('adminlte::page')
+
+@section('title', 'Dashboard')
+
+@section('content_header')
+    <h1>Dashboard</h1>
+@stop
+
+@section('content')
+    <p>Welcome to this beautiful admin panel.</p>
+@stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop
 ```
 
 
@@ -81,8 +101,39 @@ sail composer require livewire/livewire
 sail php artisan vendor:publish --tag=livewire:config
 ```
 
+# Laravel Echo / Websockets
 
+old:
+https://beyondco.de/docs/laravel-websockets/getting-started/installation
 
+```
+# as for now, 2021-12-17, installation fails (deps); workaround:
+composer require guzzlehttp/psr7:^1.5
+
+composer require beyondcode/laravel-websockets
+php artisan vendor:publish --provider="BeyondCode\LaravelWebSockets\WebSocketsServiceProvider" --tag="migrations"
+php artisan migrate
+php artisan vendor:publish --provider="BeyondCode\LaravelWebSockets\WebSocketsServiceProvider" --tag="config"
+
+# port 6001
+php artisan websockets:serve
+```
+
+## Socket.io
+https://github.com/tlaverdure/laravel-echo-server
+```
+npm install laravel-echo-server
+laravel-echo-server init
+```
+
+# Routes
+
+example route for `routes/web.php`
+```
+Route::get('/example', function () {
+    return view('example');
+});
+```
 
 
 
