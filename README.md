@@ -32,7 +32,7 @@ todo
 
 
 # LDAP (Ldaprecord)
-
+https://ldaprecord.com/docs/laravel/v2/
 ```
 sail composer require directorytree/ldaprecord-laravel
 sail php artisan vendor:publish --provider="LdapRecord\Laravel\LdapServiceProvider"
