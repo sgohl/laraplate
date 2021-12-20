@@ -53,14 +53,14 @@ sail php artisan ldap:test
 ```
 
 
-#  AdminLTE Installation (notes from the original docs)
+#  AdminLTE Installation
 
 Full reference: https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Installation
 
 ```
 sail composer require jeroennoten/laravel-adminlte
 sail php artisan adminlte:install
-sail php artisan adminlte:install --only=main_views
+#? sail php artisan adminlte:install --only=main_views
 ```
 
 Copy example basic page from examples to `resources/views`
