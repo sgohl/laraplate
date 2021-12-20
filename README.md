@@ -53,7 +53,7 @@ sail php artisan ldap:test
 ```
 
 
-#  AdminLTE Installation
+#  AdminLTE
 
 Full reference: https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Installation
 
