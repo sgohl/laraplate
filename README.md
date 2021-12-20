@@ -120,7 +120,7 @@ https://github.com/tlaverdure/laravel-echo-server
 sail npm install laravel-echo-server
 sail bash
 ./node_modules/laravel-echo-server/bin/server.js init
-
+```
 modify `laravel-echo-server.json`
 ```
 	"database": "redis",
