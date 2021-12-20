@@ -118,8 +118,10 @@ sail php artisan websockets:serve
 ## Socket.io
 https://github.com/tlaverdure/laravel-echo-server
 ```
-npm install laravel-echo-server
-laravel-echo-server init
+sail npm install laravel-echo-server
+sail bash
+./node_modules/laravel-echo-server/bin/server.js init
+./node_modules/laravel-echo-server/bin/server.js start
 ```
 
 # Routes
